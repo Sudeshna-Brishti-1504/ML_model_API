@@ -72,6 +72,8 @@ print(generated_code)
 with open("generated_program.py", "w", encoding="utf-8") as f:
     f.write(generated_code)
 
+#Opens (or creates) a local file named generated_program.py in write mode ("w"). The with statement ensures the file closes properly after writing the generated_code string into it.
+
 print("\nGenerated code saved as generated_program.py")
 
 print("\nRunning generated code with your input...\n")
@@ -84,6 +86,8 @@ try:
         capture_output=True,
         timeout=10
     )
+
+#subprocess.run(...): Opens a background terminal process to execute your code.
 
     print("=" * 60)
     print("PROGRAM OUTPUT")
